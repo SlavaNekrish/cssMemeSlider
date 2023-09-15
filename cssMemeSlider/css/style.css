@@ -1,0 +1,21 @@
+body {
+  background-color: grey;
+}
+
+img {
+  width: 60%;
+  height: 55vh;
+  border: 0.2vh solid coral;
+  border-radius: 3%;
+}
+
+.slider {
+  width: 70%;
+  height: 50%;
+  overflow: hidden;
+  background-color:black
+}
+
+.middle {
+  margin: 0 auto;
+}
