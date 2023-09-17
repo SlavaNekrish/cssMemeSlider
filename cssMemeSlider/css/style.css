@@ -1,0 +1,253 @@
+body {
+  background-color: grey;
+  font-family: 'Caveat', cursive;
+}
+
+.slider {
+  width: 60%;
+  height: 50%;
+  overflow: hidden;
+  background-color:black
+}
+
+.middle {
+  margin: 4% auto;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titles-window {
+  width: 20vw;
+  overflow: hidden;
+  margin-left: 6vh;
+}
+
+.titles {
+  display: flex;
+  width: 80vw;
+  transition: all .4s ease;
+}
+
+.image-title {
+  color: #fff;
+  width: 20vw;
+  font-size: 200%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: end;
+  padding-right: 5vh;
+  margin-bottom: 5vh;
+}
+
+.bar-wrapper {
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bar {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  background-color: aqua;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all .4s ease;
+}
+
+.bar-wrapper:hover > .bar,
+.bar:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.bar:active {
+  background-color: green;
+}
+
+#r1:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(1) >.bar,
+#r2:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(2) >.bar,
+#r3:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(3) >.bar,
+#r4:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(4) >.bar {
+  background-color: coral;
+  opacity: 1;
+}
+
+input[name="r"] {
+  display: none;
+}
+
+.slides {
+  width: 400%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 2% 0 5% 0;
+}
+
+.slide {
+  width: 25%;
+  height: 60vh;
+  transition: all .6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 90%;
+  height: 100%;
+  border: 0.2vh solid coral;
+  border-radius: 3%;
+}
+
+#r1:checked ~ .slides >.s1 {
+  margin-left: 0;
+}
+
+#r2:checked ~ .slides >.s1 {
+  margin-left: -50%;
+}
+
+#r3:checked ~  .slides >.s1 {
+  margin-left: -100%;
+}
+
+#r4:checked ~  .slides >.s1 {
+  margin-left: -150%;
+}
+
+
+#r1:checked ~ .bottom-wrapper .titles-window .titles {
+  margin-left: 0;
+}
+
+#r2:checked ~ .bottom-wrapper .titles-window .titles {
+  margin-left: -20vw;
+}
+
+#r3:checked ~ .bottom-wrapper .titles-window .titles {
+  margin-left: -40vw;
+}
+
+#r4:checked ~ .bottom-wrapper .titles-window .titles {
+  margin-left: -60vw;
+}
+
+@media screen and (max-width: 1024px){
+  .slider {
+    width: 80%;
+  }
+
+  .titles-window {
+    width: 30vw;
+  }
+
+  .titles {
+    display: flex;
+    width: 120vw;
+    transition: all .4s ease;
+  }
+
+  .image-title {
+    color: #fff;
+    width: 30vw;
+    height: 6vh;
+    font-size: 200%;
+  }
+
+  #r1:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: 0;
+  }
+
+  #r2:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -30vw;
+  }
+
+  #r3:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -60vw;
+  }
+
+  #r4:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -90vw;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .slider {
+    height: 60vh;
+    margin-top: 20%;
+  }
+
+  .slides {
+    width: 400%;
+    height: 40vh;
+    padding-bottom: 0;
+    margin-top: 2%;
+  }
+
+  .slide {
+    width: 25%;
+    height: 40vh;
+    transition: all .6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titles-window {
+    margin-left: 0;
+    order: 2;
+  }
+
+  .navigation {
+    padding-right: 0;
+    margin-top: 3%;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .titles-window {
+    width: 100%;
+  }
+
+  .titles {
+    width: 400%;
+  }
+
+  .image-title {
+    width: 100%;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+
+  #r1:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: 0;
+  }
+
+  #r2:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -100%;
+  }
+
+  #r3:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -200%;
+  }
+
+  #r4:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -300%;
+  }
+}
