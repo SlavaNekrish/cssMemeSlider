@@ -138,3 +138,41 @@ input[name="r"] {
 #r4:checked ~ .bottom-wrapper .titles-window .titles {
   margin-left: -60vw;
 }
+
+@media screen and (max-width: 1024px){
+  .slider {
+    width: 80%;
+  }
+
+  .titles-window {
+    width: 30vw;
+  }
+
+  .titles {
+    display: flex;
+    width: 120vw;
+    transition: all .4s ease;
+  }
+
+  .image-title {
+    color: #fff;
+    width: 30vw;
+    font-size: 200%;
+  }
+
+  #r1:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: 0;
+  }
+
+  #r2:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -30vw;
+  }
+
+  #r3:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -60vw;
+  }
+
+  #r4:checked ~ .bottom-wrapper .titles-window .titles {
+    margin-left: -90vw;
+  }
+}
