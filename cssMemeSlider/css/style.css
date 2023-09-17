@@ -1,16 +1,17 @@
 body {
   background-color: grey;
+  font-family: 'Caveat', cursive;
 }
 
 .slider {
-  width: 80%;
-  height: 60%;
+  width: 60%;
+  height: 50%;
   overflow: hidden;
   background-color:black
 }
 
 .middle {
-  margin: 5% auto;
+  margin: 4% auto;
 }
 
 .bottom-wrapper {
@@ -21,7 +22,7 @@ body {
 .titles-window {
   width: 20vw;
   overflow: hidden;
-  margin-left: 5vh;
+  margin-left: 6vh;
 }
 
 .titles {
@@ -33,6 +34,7 @@ body {
 .image-title {
   color: #fff;
   width: 20vw;
+  font-size: 200%;
 }
 
 .navigation {
@@ -40,28 +42,39 @@ body {
   justify-content: end;
   padding-right: 5vh;
   margin-bottom: 5vh;
+}
 
-  /* padding: 0vh 14vh 10vh 0vh; */
+.bar-wrapper {
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .bar {
   width: 3vh;
   height: 3vh;
   border-radius: 50%;
-  margin-right: 1vh;
   background-color: aqua;
   cursor: pointer;
   opacity: 0.6;
   transition: all .4s ease;
 }
 
+.bar-wrapper:hover > .bar,
 .bar:hover {
   opacity: 0.9;
   transform: scale(1.1);
 }
 
-#r1:checked {
+#r1:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(1) >.bar,
+#r2:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(2) >.bar,
+#r3:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(3) >.bar,
+#r4:checked ~ .bottom-wrapper .navigation .bar-wrapper:nth-of-type(4) >.bar {
   background-color: coral;
+  opacity: 1;
 }
 
 input[name="r"] {
